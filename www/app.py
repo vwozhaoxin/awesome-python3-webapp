@@ -10,8 +10,9 @@ from aiohttp import web
 from coroweb import add_routes, add_static
 #from  orm import Model, StringField, IntegerField, BooleanField, FloatField, TextField, create_pool,select
 
-#def index(request):
-#    return web.Response(body=b'<h1>Awesome</h1>', headers={'content-type':'text/html'})
+
+#    return web.Response(body=b'<h1>Awesome</h1>',
+#def index(request):headers={'content-type':'text/html'})
 def init_jinja2(app, **kw):
     logging.info('init jinja2...')
     options = dict(
