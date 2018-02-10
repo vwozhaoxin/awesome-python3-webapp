@@ -15,7 +15,7 @@
         {% endif %}
     </ul>
 {% endmacro %}
-
+-->
 <html>
 <head>
     <meta charset="utf-8" />
@@ -50,6 +50,9 @@
                         <div class="uk-dropdown uk-dropdown-navbar">
                             <ul class="uk-nav uk-nav-navbar">
                                 <li><a href="/signout"><i class="uk-icon-sign-out"></i> 登出</a></li>
+                                {% if user.admin %}
+                                    <li><a href="/manage/blogs/create"><i class="uk-icon-edit"></i> 创建日志</a></li>
+                                {% endif %}
                             </ul>
                         </div>
                     </li>
@@ -75,10 +78,10 @@
         <div class="uk-container uk-container-center uk-text-center">
             <div class="uk-panel uk-margin-top uk-margin-bottom">
                 <p>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-github"></a>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+                    <a target="_blank" href="https://weibo.com/fly51fly?is_hot=1" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="https://github.com/vwozhaoxin" class="uk-icon-button uk-icon-github"></a>
+                    <a target="_blank" href="https://www.coursera.org/" class="uk-icon-button uk-icon-linkedin-square"></a>
+                    <a target="_blank" href="https://twitter.com/JT9In6jOgvi56Ob" class="uk-icon-button uk-icon-twitter"></a>
                 </p>
                 <p>Powered by <a href="#">Awesome Python Webapp</a>. Copyright &copy; 2014. [<a href="/manage/" target="_blank">Manage</a>]</p>
                 <p><a href="http://www.deeplearning.net/" target="_blank">deeplearning</a>. All rights reserved.</p>
