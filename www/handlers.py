@@ -80,10 +80,10 @@ def index(request):
     return {
         '__template__': 'blogs.html',
         'blogs': blogs,
-       'page': page,
+       #'page': page,
        # 'user': user,
         'user': request.__user__,
-        '__user__': request.__user__
+        #'__user__': request.__user__
     }
 
 @get('/blog/{id}')
@@ -97,7 +97,7 @@ async def get_blog(id):
         '__template__': 'blog.html',
         'blog': blog,
         'comments': comments,
-        'user': request.__user__
+       # 'user': request.__user__
     }
 
 @get('/register')
@@ -222,9 +222,9 @@ async def api_blogs(*, page='1'):
     return dict(page=p, blogs=blogs)
 
 @get('/manage/blogs')
-def manage_blogs(*, page='1'):
+def manage_blogs(*,request, page='1'):
     return {
         '__template__': 'manage_blogs.html',
         'page_index': get_page_index(page),
-        'user':request.__user__
+        'user': request.__user__
     }
