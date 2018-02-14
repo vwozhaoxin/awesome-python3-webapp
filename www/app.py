@@ -1,3 +1,4 @@
+#/usr/local/python/bin/python3
 # *-* coding:utf-8 *-*
 #author
 
