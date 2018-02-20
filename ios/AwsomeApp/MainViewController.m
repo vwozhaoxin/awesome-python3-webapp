@@ -1,9 +1,4 @@
-//
-//  MainViewController.m
-//
-//  Created by Michael Liao on 5/22/14.
-//  Copyright (c) 2014 iTranswarp. All rights reserved.
-//
+
 
 #import "MainViewController.h"
 
@@ -60,7 +55,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.webView loadHTMLString:self.html baseURL:[NSURL URLWithString:@"http://awesome.liaoxuefeng.com/"]];
+    [self.webView loadHTMLString:self.html baseURL:[NSURL URLWithString:@"http://67.216.211.177/"]];
 }
 
 - (void)didReceiveMemoryWarning

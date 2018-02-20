@@ -1,9 +1,8 @@
 //
-//  MenuViewController.m
 //
-//  Created by Michael Liao on 5/22/14.
-//  Copyright (c) 2014 iTranswarp. All rights reserved.
 //
+//  Created b xin zhao.
+//  //
 
 #import "MenuViewController.h"
 #import "MainViewController.h"
@@ -34,7 +33,7 @@
 - (void)requestMenuFromNetwork
 {
     [self showNetworkError:NO showIndicator:NO];
-    NSURL* theURL = [NSURL URLWithString:@"http://awesome.liaoxuefeng.com/api/blogs?format=html"];
+    NSURL* theURL = [NSURL URLWithString:@"http://67.216.211.177/api/blogs?format=html"];
     NSURLRequest* request = [NSURLRequest requestWithURL:theURL cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
     NSURLConnection* conn = [NSURLConnection connectionWithRequest:request delegate:self];
     if (conn) {
